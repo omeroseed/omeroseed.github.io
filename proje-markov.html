@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ömer fikri sağlam's very personal page</title>
+    <link rel="icon" type="image/jpeg" href="pics/favicon.jpeg">
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #d3d3d3;
+            font-family: "courier new", courier, monospace;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #ff66ff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #333;
+        }
+
+        hr {
+            border: 1px dashed #555;
+            margin: 25px 0;
+        }
+
+        .blink_text {
+            animation: blinker 1s linear infinite;
+            color: #ffcc00;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.85em;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .project-img {
+            border: 2px dashed #555;
+            padding: 5px;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <marquee scrollamount="4">hoş geldiniz... kayan yazı eklemek süper fikirmiş bu arada. şimdi ziyaretçi defteri de eklemem
+        lazım, bbs linki de güzel olur, rss feed de lazım. ee, napıyonuz? bu yazıyı komik şeylerle doldurmak isterdim ancak
+        aklıma hiçbir şey gelmiyor.</marquee>
+
+<h1 style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+    <span style="display: inline-block; width: 24px; height: 24px; background-color: #6f0b88; flex-shrink: 0;"></span>
+    ömer fikri sağlam's very personal page
+</h1>
+    <nav>
+        [<a href="index.html">ben</a>]
+        [<a href="projeler.html">projeler</a>]
+        [<a href="iletisim.html">iletişim</a>]
+    </nav>
+
+    <hr>
+
+    <p>[<a href="projeler.html">..(geri)</a>]</p>
+
+    <h2>markov yöntemleriyle iot ağlarında bilgi yaşı (age of information) optimizasyonu</h2>
+    <p><strong></strong> maltepe üniversitesi, doç. dr. rıfat volkan şenyuva</p>
+
+<p style="margin: 25px 0;">
+    [<a href="https://drive.google.com/file/d/1jv49JZFcc_D-mVicbPtrSSupElye9tS6/view?usp=drive_link" target="_blank" style="font-weight: bold; color: #ffcc00;">makaleyi
+        okumak için tıklayın (ingilizce, pdf, salt okunur)</a>]
+</p>
+
+        <h3>proje özeti</h3>
+        <p>bilgi yaşı (age of information - aoi), zaman duyarlılığının ön planda olduğu nesnelerin interneti (iot)
+            uygulamalarında veri tazeliğini ölçen kritik bir performans metriğidir. bu çalışmada, iot ağlarında aoi
+            optimizasyonu markov tabanlı analitik modelleme ile incelenmiştir. sensör düğümlerinin veri üretim ve
+            iletim süreçlerindeki kuyruklama dinamiklerini (fifo ve ber/g/1/q modelleri) karakterize etmek amacıyla ayrık
+            zamanlı bir markov zinciri modeli geliştirilmiştir. düğüm sayısı, kuyruk uzunluğu ve paket geliş hızı gibi
+            ağ parametrelerinin aoi ve paket kayıp olasılığı (p_drops) üzerindeki etkileri hem teorik olarak hesaplanmış hem de
+            simüle edilmiştir. elde edilen bulgular, kuyruk kapasitesinin artırılmasının paket kayıplarını azalttığını,
+            ancak paketlerin kuyrukta bekleme süresini uzatarak bilgi yaşını artırdığını matematiksel olarak
+            ispatlamıştır.</p>
+        
+        <h3>temel kazanımlar</h3>
+        <ul>
+            <li>matematiksel modelleme ile stokastik süreçler (bernoulli ve poisson dağılımları) ve ayrık zamanlı
+                markov zincirleri kullanılarak karmaşık iot ağ dinamiklerinin kuramsal olarak modellenmesi.</li>
+            <li>kuyruk teorisi denklemleri kullanılarak ber/g/1/q kuyruk yapısı ve fifo (first-in first-out) mantığı
+                ile çalışan sistemlerde darboğaz ve gecikme analizlerinin yapılması.</li>
+            <li>sistemdeki sensörlerin kuyruk durumları ve baz istasyonunun iletim
+                kararlarını içeren çok boyutlu sistem durumlarının (state space) algoritmik olarak matrislere dökülmesi.
+                </li>
+            <li> bilgi yaşı ile ağ güvenilirliği (paket kayıp oranı) arasındaki
+                ters orantının analitik olarak dengelenmesi.</li>
+        </ul>
+        
+        <h3>kullanılan araçlar ve kütüphaneler</h3>
+        <ul>
+            <li><strong>matlab:</strong> simülasyon ortamının uçtan uca tasarlanması ve algoritmaların kodlanması.</li>
+            <li><strong>python:</strong> matlab ile oluşturulan ortamın makalede yer alacak şekilde derlenmesi (kullanılan kütüphaneler aşağıdadır).</li>
+                    <blockquote>
+
+            <li><strong>numpy:</strong> durum geçiş olasılık matrislerinin (transition probability matrix) oluşturulması, lineer
+                cebir operasyonları ve özvektör (eigenvector) hesaplamaları ile kararlı durum (steady-state) analizlerinin
+                yapılması.</li>
+            <li><strong>pandas:</strong> büyük boyutlu durum matrislerinin yapılandırılması ve raporlanmak üzere dışa
+                aktarılması.</li>
+            <li><strong>matplotlib:</strong> simülasyon çıktılarının, kuyruk uzunluğu (q) ve bilgi yaşı (aoi) ilişkisini
+                gösterecek şekilde kuramsal grafiklere dönüştürülmesi.</li>
+            <li><strong>itertools:</strong> sistemin alabileceği tüm olası durum kombinasyonlarının iteratif olarak
+                üretilmesi.</li>
+        </ul>
+
+<div style="text-align: center; margin: 30px 0;">
+    <img src="pics/matrix.png" alt="[görsel açıklaması]" class="project-img"
+        style="display: block; margin: 0 auto;">
+    <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ belirlenen senaryoda paket aktarımı için durum geçiş olasılık matrisleri.
+        ]</p>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+    <img src="pics/0_3_graph.png" alt="[görsel açıklaması]" class="project-img"
+        style="display: block; margin: 0 auto;">
+    <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ λ=0,3 durumunda bilgi yaşı ve kuyruk uzunluğu grafiği.
+        ]</p>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+    <img src="pics/0_3_graph.png" alt="[görsel açıklaması]" class="project-img"
+        style="display: block; margin: 0 auto;">
+    <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ λ=0,7 durumunda bilgi yaşı ve kuyruk uzunluğu grafiği.
+        ]</p>
+</div>
+
+    <hr>
+    <p>[<a href="projeler.html">..(geri)</a>]</p>
+
+    <div class="footer">
+        <p><span class="blink_text">[ son güncelleme: 29 mayıs 2026 (buranın yanıp sönmesine gerek var mıydı ki?) ]</span></p>
+        <p>lütfen ekranınızı 800x600 çözünürlüğe (256 renk tabii) ayarlayın ve mümkünse netscape navigator 3 kullanın çünkü
+            modern
+            tarayıcılar bu görkemli sayfayı fazla hızlı açıyor ve tüm nostaljiyi bozuyor.</p>
+        <p style="margin-top: 15px;">
+            <a href="https://archive.org/details/netscape-navigator-3.0-personal-edition" target="_blank">
+                <img src="pics/netscape.gif" style="border: none; width: 88px; height: 31px;">
+            </a>
+        </p>
+    
+        <p>ziyaretçi sayısı (çalışmıyor): [ 001312 ]</p>
+    </div>
+</body>
+
+</html>

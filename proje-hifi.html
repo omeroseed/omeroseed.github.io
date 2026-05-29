@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ömer fikri sağlam's very personal page</title>
+    <link rel="icon" type="image/jpeg" href="pics/favicon.jpeg">
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #d3d3d3;
+            font-family: "courier new", courier, monospace;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #ff66ff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: #333;
+        }
+
+        hr {
+            border: 1px dashed #555;
+            margin: 25px 0;
+        }
+
+        .blink_text {
+            animation: blinker 1s linear infinite;
+            color: #ffcc00;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.85em;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .project-img {
+            border: 2px dashed #555;
+            padding: 5px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <marquee scrollamount="4">hoş geldiniz... kayan yazı eklemek süper fikirmiş bu arada. şimdi ziyaretçi defteri de eklemem
+        lazım, bbs linki de güzel olur, rss feed de lazım. ee, napıyonuz? bu yazıyı komik şeylerle doldurmak isterdim ancak
+        aklıma hiçbir şey gelmiyor.</marquee>
+
+<h1 style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+    <span style="display: inline-block; width: 24px; height: 24px; background-color: #6f0b88; flex-shrink: 0;"></span>
+    ömer fikri sağlam's very personal page
+</h1>
+    <nav>
+        [<a href="index.html">ben</a>]
+        [<a href="projeler.html">projeler</a>]
+        [<a href="iletisim.html">iletişim</a>]
+    </nav>
+
+    <hr>
+
+    <p>[<a href="projeler.html">..(geri)</a>]</p>
+
+    <h2>özel hi-fi ses sistemi tasarımı ve akustik modelleme</h2>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="pics/amp.png" alt="[lm3886 amplifikatör ve akustik kabin görseli]" class="project-img"
+            style="display: block; margin: 0 auto;">
+        <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ amplifikatör devresi. ]</p>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="pics/crossover.png" alt="[lm3886 amplifikatör ve akustik kabin görseli]" class="project-img"
+            style="display: block; margin: 0 auto;">
+        <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ sürücülerarası iletişimi sağlayacak crossover devresi. ]</p>
+    </div>
+
+    <!--<div style="text-align: center; margin: 30px 0;">
+        <img src="hifi_gorsel.jpg" alt="[lm3886 amplifikatör ve akustik kabin görseli]" class="project-img"
+            style="display: block; margin: 0 auto;">
+        <p style="font-size: 0.85em; color: #888; margin-top: 10px;">[ mdf sürücü kabini ve amplifikatör kasası dizaynı ]</p>
+    </div>!-->
+
+    <h3>proje özeti</h3>
+    <p>mart-nisan 2026'da gerçekleştirilen bu projede, bir amplifikatör ve özel yapım hoparlör
+        kabinlerinden oluşan tam teşekküllü bir hi-fi ses sistemi tasarlanıp üretilmiştir. lm3886 entegresi tabanlı,
+        düşük gürültülü ve yüksek sadakatli bu güç amplifikatörünün elektronik tasarımı, 18v gerilimli toroidal güç kaynağı ile 100w'a kadar olan sürücüleri çalıştıracak şekilde  dizaynı, komponent seçimi ve montaj süreçleri bütünüyle tarafımca yürütülmüştür. projenin
+        akustik ayağında ise, vituixcad yazılımı kullanılarak detaylı crossover devresi simülasyonları yapılmış;
+        rezonans hesaplamaları doğrultusunda akustik olarak eşlenmiş hoparlör kabin mimarisi tasarlanmış ve mdf'den üretilmesi planlanan kabinin dizaynı oluşturulmuştur.</p>
+
+    <h3>temel kazanımlar</h3>
+    <ul>
+        <li>lm3886 entegresi ile amplifikatör
+            mimarisinin kurulması, pürüzsüz ses çıkışı için güç kaynağı dizaynı ve düşük toleranslı, gürültüsüz
+            komponentlerin seçimi.</li>
+        <li>hoparlör sürücülerinin frekans tepkilerinin incelenmesi ve
+            tweeter/woofer ayrımını yapacak crossover devrelerinin simülasyon ortamında optimize edilmesi.</li>
+        <li>akustik simülasyon verilerine dayanarak, ses
+            dalgalarının kabin içindeki sönümlenmesini sağlayacak doğru hacim, yalıtım ve hava çıkış dinamiğine
+            sahip ahşap kabinlerin tasarlanması.</li>
+    </ul>
+
+    <h3>kullanılan araçlar ve donanımlar</h3>
+    <ul>
+        <li><strong>kicad:</strong> amplifikatör ve crossover devresinin çizimi.</li>
+        <li><strong>vituixcad:</strong> hoparlör crossover modellemesi, frekans yanıt analizi, empedans eşleştirme ve
+            kabin rezonans simülasyonları.</li>
+        <li><strong>freecad:</strong> hoparlör kabininin teknik çizimi.</li>
+    </ul>
+
+    <hr>
+    <p>[<a href="projeler.html">..(geri)</a>]</p>
+
+    <div class="footer">
+        <p><span class="blink_text">[ son güncelleme: 29 mayıs 2026 (buranın yanıp sönmesine gerek var mıydı ki?) ]</span></p>
+        <p>lütfen ekranınızı 800x600 çözünürlüğe (256 renk tabii) ayarlayın ve mümkünse netscape navigator 3 kullanın çünkü
+            modern
+            tarayıcılar bu görkemli sayfayı fazla hızlı açıyor ve tüm nostaljiyi bozuyor.</p>
+        <p style="margin-top: 15px;">
+            <a href="https://archive.org/details/netscape-navigator-3.0-personal-edition" target="_blank">
+                <img src="pics/netscape.gif" style="border: none; width: 88px; height: 31px;">
+            </a>
+        </p>
+    
+        <p>ziyaretçi sayısı (çalışmıyor): [ 001312 ]</p>
+    </div>
+
+</body>
+
+</html>
